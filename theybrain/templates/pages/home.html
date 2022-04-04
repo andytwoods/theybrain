@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="p-4 m-3 rounded shadow" id="top" style="background: #c9c9c9;">
+    <h1 class="mb-3 display-1 strong">Dear lovely human!</h1>
+    <h2>I want my brain to use singular-they pronouns, effortlessly</h2>
+    <h2>I want my brain to not bat an eyelid when singular-they pronouns are used around me</h2>
+    <h2>How can I make this so??</h2>
+    <h2>Lots of exposure!</h2>
+    <h2>I want to collect  example sentences that use they-singular. Hopefully later today (4th April) this site
+      will
+      let anyone read (hear? watch?!) these sentences. Doing this for a few minutes a day, for a few days may be
+      all be that's needed...</h2>
+    <h2>Can you send me your they-singular pronoun sentences? On Twitter, can you use this hashtag, and I'll hover them up!</h2>
+    <h1 class="display-1">#TheyBrain</h1>
+
+    <div class="p-4 m-4">
+      <h4 class="d-inline-block">Who am I?</h4>
+      <span class="ms-2">My name's Andy (he/they). I'm a Psychologist and a coder. My brain is a bit rubbish with they-singular pronouns
+  </span>
+    </div>
+  </div>
+
+  <script>
+
+  var rainbow = ['#9400D3', '#4B0082', '#0000FF', '#22be22', '#FFFF00','#FF7F00', '#FF0000'];
+    var els = [];
+    var t = 500;
+    var i = 0;
+    $('#top').children().each(function(){
+      var el = this;
+      $(el).hide();
+      $(el).css('color', rainbow[i]);
+      $(el).addClass('mb-3');
+      i++;
+      if(i>rainbow.length-1) i=0;
+      els.push(el);
+      setTimeout(function(){
+        $(el).show(500);
+      }, t);
+      t+= 500;
+    })
+
+  </script>
+{% endblock content %}
